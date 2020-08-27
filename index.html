@@ -1,13 +1,21 @@
 <!DOCTYPE html>
 
 <head>
+    <link href="https://fonts.googleapis.com/css2?family=Amatic+SC:wght@700&display=swap" rel="stylesheet"> 
     <link rel="stylesheet" href="styles.css">
     <script src='https://kit.fontawesome.com/a076d05399.js'></script>
 </head>
 
 <body>
   <h1> Rock, Paper, Scissors</h1>
+
   <div id="outer-container">
+    <div id="input-container">
+      <label for="rounds">How many rounds?</label>
+      <input id="rounds" type="number" value="5" min="1" max="99"/>
+      <button type="button" id="start-btn">Start!</button>
+    </div>
+
     <div id="score-container" class="inner-ctr">
       <div id="player-score" class="score-divs">0</div>
       <div id="score-separator" class="score-divs"> - </div>
@@ -15,17 +23,14 @@
     </div>
 
     <div id="game-container" class="inner-ctr">
-      <button type="button" id="rock-btn" class="rps-btns"><i class='far fa-hand-rock'></i></button>
-      <button type="button" id="paper-btn" class="rps-btns"><i class='far fa-hand-paper'></i></button>
-      <button type="button" id="scissors-btn" class="rps-btns"><i class='far fa-hand-scissors'></i></button>
+      <button type="button" disabled id="rock-btn" class="rps-btns"><i class='far fa-hand-rock'></i></button>
+      <button type="button" disabled id="paper-btn" class="rps-btns"><i class='far fa-hand-paper'></i></button>
+      <button type="button" disabled id="scissors-btn" class="rps-btns"><i class='far fa-hand-scissors'></i></button>
     </div>
 
     <div id="results-container" class="inner-ctr">
       <div id="player-mv-ctr" class="mv-ctr">
         <i id="player-mv-icon" class='far fa-hand-rock start'></i>
-      </div>
-      <div id="winner-ctr" class="mv-ctr">
-        <i id="winner-icon"></i>
       </div>
       <div id="comp-mv-ctr" class="mv-ctr">
         <i id="comp-mv-icon" class='far fa-hand-rock start'></i>
